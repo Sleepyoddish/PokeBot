@@ -1,0 +1,10 @@
+# Example cron entry for running PokeBot tests every day at 7:00 AM local time.
+# Install with:
+#   crontab cron/pokebot-tests.crontab.example
+#
+# Cron has a minimal PATH, so this uses the absolute project path.
+
+SHELL=/bin/bash
+PATH=/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin
+
+0 7 * * * cd "/Users/zoe/VS Code /PokeBot" && ./scripts/run_tests.sh
